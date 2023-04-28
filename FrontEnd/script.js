@@ -80,6 +80,8 @@ const showAllBtn = document.querySelector('.show-all-btn');
 showAllBtn.addEventListener('click', () => buildGallery(fetchWorks()));
 
 
+console.log(localStorage.getItem('token'));
+
 
 
 
