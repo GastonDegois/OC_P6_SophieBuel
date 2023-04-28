@@ -49,12 +49,12 @@ async function checkUser() {
         errorEmail.innerHTML = "E-mail inconnue !";
    } else if (r.status == 401) {
         errorPassword.innerHTML = "Mauvais mot de passe !";
-        // if it matches, then log the user and send to index.html
+        // if it matches, then log    the user and send to index.html
    } else if (r.status == 200) {
         const data = await r.json();
         localStorage.setItem('token', data.token);
         console.log(await r);
         console.log(await data.token);
-        location.href="./index.html";
+        location.href="../index.html";
     }
 }
