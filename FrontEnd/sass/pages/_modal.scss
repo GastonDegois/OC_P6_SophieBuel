@@ -1,0 +1,178 @@
+/* MODAL */
+.modal {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: $edit-banner-height;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background-color: white;
+        width: 630px;
+        height: fit-content;
+        margin-top: 600px;
+        padding: 60px 0px 48px 0px;
+        border-radius: 10px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 420px;
+    }
+    &__close-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        top: 16px;
+        right: 20px;
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: all .3s;
+        &:hover {
+            transform: rotate(0deg);
+        }
+    }
+    &__gallery-mode-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        top: 16px;
+        left: 20px;
+        cursor: pointer;
+    }
+    &__formular-mode-btn {
+        margin-bottom: 23px;
+        width: 237px;
+    }
+    &__heading {
+        font-size: 26px;
+        margin-bottom: 46px;
+        text-align: center;
+        font-family: 'Work Sans', sans-serif;
+    }
+    &__grey-line {
+        border-bottom: solid #B3B3B3 1px;
+        width: 100%;
+        margin-top: 47px;
+        margin-bottom: 38px;
+    }
+    &__delete-gallery-btn {
+        background: none;
+        border: none;
+        font-size: 14px;
+        font-family: 'Syne', sans-serif;
+        color: $color-primary;
+
+    }
+}
+
+
+
+
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px 7px;
+    &__item {
+        position:relative;
+        width: 78px;
+        &:hover .modal-gallery__open-item-btn {
+            display: flex;
+        }
+    }
+    &__btn-container {
+        display: flex;
+        column-gap: 3px;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+    }
+    &__open-item-btn {
+        display: none;
+    }
+    &__img {
+        height: 104px;
+        width: 78px;
+        object-fit: cover;
+    }
+    &__edit-item {
+        font-size: 12px;
+        font-family: 'Work sans', sans-serif;
+        margin-top: 1px;
+    }
+}
+
+.preview-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        @include img-container;                           
+        &__remove-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        &__preview {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;   
+        }
+    }
+
+.modal-form {
+    width: 100%;
+    &__submit-btn {
+        align-self: center;
+        width: 237px;
+    }
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include img-container;
+    &__input {       
+        height: 0;
+        width: 0;
+    }
+    &__icon  {
+        margin-top: 28px;
+        color: #B9C5CC;
+        font-size: 46px;
+    }
+    &__add-btn {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        margin-top: 21px;
+        margin-bottom: 7px;
+        background-color: #CBD6DC;
+        border: none;
+        color: #306685;
+        font-family: 'Work sans', sans-serif;
+        width: 173px;
+    }
+    &__file-infos {
+        font-size: 10px;
+    }
+}   
+
+
+
