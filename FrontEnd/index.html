@@ -121,6 +121,43 @@
           <button class="modal__formular-mode-btn btn btn--filled btn--animated">Ajouter une photo</button>
           <button class="modal__delete-gallery-btn">Supprimer la galerie</button>
         </div>
+
+        <!-- FORMULAR MODE-->
+        <div class="modal__content modal-formular-mode display-none">
+          <button class="modal__gallery-mode-btn">
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </button>
+          <h3 class="modal__heading">Ajout photo</h3>
+          <!-- FORMULAR -->
+          <form class="modal-form" action="">
+            <!-- IMAGE INPUT CONTAINER -->
+            <div class="img-container">
+              <i class="img-container__icon fa-regular fa-image"></i>
+              <input class="img-container__input" type="file" id="upload" name="image" accept=".jpg, .jpeg, .png" />
+              <label for="upload" class="img-container__add-btn btn">+ Ajouter photo</label>
+              <p class="img-container__file-infos">jpg, png : 4mo max</p>
+            </div>
+            <!-- IMAGE PREVIEW CONTAINER -->
+            <div class="preview-container display-none" id="preview">
+              <i class="preview-container__remove-btn btn--small-black fa-solid fa-trash-can"></i>
+            </div>
+            <!-- END OF THE FORM -->
+            <p class="error-message img-error-message"></p>
+            <label for="modal-form-title">Titre</label>
+            <input class="modal-form__title" id="modal-form-title" type="text" name="title" />
+            <p class="error-message title-error-message"></p>
+            <label for="modal-form-categories">Catégorie</label>
+            <div class="select-style">
+              <select class="modal-form__categories" id="modal-form-categories" name="category" required>
+                <option value=""></option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p class="error-message category-error-message"></p>
+            <div class="modal__grey-line"></div>
+            <input class="modal-form__submit-btn btn btn--filled unavailable" type="submit" value="Valider" />
+          </form>
+        </div>
       </div>
     </aside>
 

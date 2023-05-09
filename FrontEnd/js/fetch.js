@@ -23,6 +23,6 @@ const apiFetch = async (type, method, bodyContent) => {
 
 export const apiGetWorks = async () => {return await apiFetch('works', 'GET')};
 export const apiGetCategories = async () => {return await apiFetch('categories', 'GET')};
-export const apiPostUserLogin = async (userLogin) => {return await apiFetch('users/login','POST', userLogin)};
 export const apiDeleteImage = async (imageId) => {return await apiFetch(`works/${imageId}`, 'DELETE')};
 export const apiPostImage = async (formData) => {return await apiFetch('works', 'POST', formData)};
+export const apiPostUserLogin = async (userLogin) => {return await apiFetch('users/login','POST', userLogin)};

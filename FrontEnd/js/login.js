@@ -52,14 +52,7 @@ const checkUser = async () => {
         // if it matches, then log the user and send to index.html
    } else if (r.status == 200) {
         const data = await r.json();
-<<<<<<< HEAD:FrontEnd/js/login.js
         window.localStorage.setItem('token', data.token);
         location.href="../index.html";
-=======
-        localStorage.setItem('token', data.token);
-        console.log(await r);
-        console.log(await data.token);
-        location.href="./index.html";
->>>>>>> parent of 6743159 (moving index.html to root folder to fix github pages):FrontEnd/login.js
     }
 }
