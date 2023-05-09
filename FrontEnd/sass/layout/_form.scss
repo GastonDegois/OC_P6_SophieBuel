@@ -1,0 +1,51 @@
+/*  FORM - GENERAL */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & label, .error-message {
+        align-self: flex-start;
+    }
+    & .error-message {
+        padding-top: 5px;
+    }
+}
+input, select {
+    height: 50px;
+}
+input, select, textarea {
+    width: 100%;
+    font-size: 1.2em;
+    border: none;
+    padding-left: 16px;
+    padding-right: 29px;
+    @include input-and-btn_shadow;
+}
+select {
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+.select-style {
+    position: relative;
+    width: 100%;
+    & i {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        right: 29px;
+        transform: translateY(-50%);
+    }
+
+}
+label {
+	margin: 2em 0 1em 0;
+}
+
+
+
+
+
+

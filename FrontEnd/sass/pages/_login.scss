@@ -1,0 +1,16 @@
+
+/* LOGIN PAGE */
+
+.login-form {
+	width: 40%;
+	margin: auto;
+    & input[type="submit"] {
+        width: 179px;
+        margin-top: 37px;
+        margin-bottom: 28px;
+    }
+    & a {
+        color: #1D6154;
+    }
+}
+

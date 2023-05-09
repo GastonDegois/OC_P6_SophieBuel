@@ -1,0 +1,61 @@
+.btn {
+    font-family: 'Syne';
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 60px;
+    height: 37px;
+    font-size: 16px;
+    border: 1px solid $color-primary;
+    width: fit-content;
+    min-width: 100px;
+    cursor: pointer;
+    @include input-and-btn_shadow;
+    &--animated  {
+        transform: scale(1);
+        transition: all .2s;
+        &:hover {
+            transform: scale(1.04);
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.18);
+        }
+        &:active {
+            transform: scale(.98);
+            @include input-and-btn_shadow;
+        }
+    }
+    &--filled{
+        color: white;
+        background-color: $color-primary;
+    }
+    &--unfilled{
+        color: $color-primary;
+        background-color: white;
+    }
+    &--edit {
+        border: none;
+        font-size: 14px;
+        font-family: 'Work Sans',  sans-serif;
+    }
+    &--small-black {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17px;
+        height: 17px;
+        background-color: black;
+        color: white;
+        font-size: .7em;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover {
+            transition: .2s;
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+    &.unavailable {
+        background-color: #A7A7A7;
+        border: #A7A7A7;
+        cursor: default;
+    }
+}

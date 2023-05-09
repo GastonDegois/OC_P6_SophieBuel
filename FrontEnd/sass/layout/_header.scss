@@ -1,0 +1,38 @@
+.header {
+    &__logo-link {
+        text-decoration: none;
+    }
+    &__heading{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Syne';
+        font-size: 22px;
+        font-weight: 800;
+        color: #B1663C;
+        & > span {
+            font-family: 'Work Sans';
+            font-size:10px;
+            letter-spacing: 0.1em;
+        }
+    }
+}
+
+nav {
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    
+    }
+    & li {
+        padding: 0 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        @include hover-color-primary;
+    }
+    & a {
+        text-decoration: none;
+        color: black;
+        @include hover-color-primary;
+    }
+}

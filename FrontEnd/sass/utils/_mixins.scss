@@ -1,0 +1,15 @@
+@mixin input-and-btn_shadow {
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+@mixin hover-color-primary {
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+@mixin img-container {
+  height: 169px;
+  width: 100%;   
+  background-color: #E8F1F7;
+}

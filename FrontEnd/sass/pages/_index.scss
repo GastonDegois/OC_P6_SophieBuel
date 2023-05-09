@@ -1,0 +1,109 @@
+/* INTRODUCTION SECTION */
+.introduction {
+    flex-direction: row;
+    &__figure {
+    	flex: 1;
+        display: flex;
+        flex-direction: column;
+        & .edit-mode__modify-link {
+            margin-left: 10%;
+            margin-top: 15px;
+        }
+    }
+    &__img {
+    	display: block;
+    	margin: auto;
+    	width: 80%;
+    }  
+    &__article {
+    	flex: 1;
+    }
+    &__heading {
+    	margin-bottom: 1em;
+        margin-top: 19px;
+    }
+    &__p {
+    	margin-bottom: 0.5em;
+    }
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    padding-top: 79px;
+    margin-bottom: 0;
+    &__heading-container {
+        display: flex;
+        align-items: center;
+        column-gap: 31px;
+        margin: auto;
+        margin-bottom: 51px;
+    }
+    &__heading {
+        text-align: center;
+    }
+    &__filters {
+        display: flex;
+        align-self: center;
+        column-gap: 10px;
+        margin-bottom: 10px;
+    }
+    &__gallery {
+        margin-top: 41px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        & img {
+            width: 100%;
+            aspect-ratio: 0.75;
+            object-fit: cover;        
+        }
+    }
+}
+
+/* CONTACT SECTION */
+.contact {
+	width: 50%;
+    margin: auto;
+    margin-top: 57px;
+    & h2{
+        margin-bottom: 20px;
+    }
+    & form {
+        margin-top:30px;
+    }
+    & input[type="submit"] {
+        width: 180px;
+        margin : 2em auto ;
+    }
+}
+
+/* EDIT MODE */
+.edit-mode {
+    &__modify-link {
+        text-decoration: none;
+        color: $color-primary;
+    }
+    &__banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 3;
+        height: $edit-banner-height;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        column-gap: 25px;
+        background-color: black;
+        padding: 10px;
+    }
+    &__btn {
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+

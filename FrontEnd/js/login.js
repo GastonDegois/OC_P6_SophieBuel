@@ -1,11 +1,15 @@
+
+// IMPORTS
+import {apiPostUserLogin} from './fetch.js';
 // VARIABLES
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
-const errorEmail = document.querySelector('.error--email');
-const errorPassword = document.querySelector('.error--password')
-const submit = document.querySelector('#login form');
+const errorEmail = document.querySelector('.email-error-message');
+const errorPassword = document.querySelector('.password-error-message');
+const submit = document.querySelector('.login-form');
+console.log(submit);
 
-
+console.log("test");
 // call when the form is submitted
 submit.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -31,30 +35,24 @@ submit.addEventListener('submit', (e) => {
     if (isEmailValid == true && isPasswordValid == true) {checkUser()}
 });
 
-async function checkUser() {
+const checkUser = async () => {
 
     // send email and password to API
     const user = {
         "email": emailInput.value,
         "password": passwordInput.value
     }
-    const r = await fetch('http://localhost:5678/api/users/login', {
-       method: 'POST',
-       headers: {'Content-Type': 'application/json;charset=utf-8'},
-         body: JSON.stringify(user)
-   })
+    const r = await apiPostUserLogin(JSON.stringify(user));
 
    // if error is returned, then print error message
     if (r.status == 404) {
         errorEmail.innerHTML = "E-mail inconnue !";
    } else if (r.status == 401) {
         errorPassword.innerHTML = "Mauvais mot de passe !";
-        // if it matches, then log    the user and send to index.html
+        // if it matches, then log the user and send to index.html
    } else if (r.status == 200) {
         const data = await r.json();
-        localStorage.setItem('token', data.token);
-        console.log(await r);
-        console.log(await data.token);
+        window.localStorage.setItem('token', data.token);
         location.href="../index.html";
     }
 }

@@ -11,32 +11,34 @@
       rel="stylesheet"
     />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+    <header class="header">
+      <a class="header__logo-link" href="../index.html">
+        <h1 class="header__heading">Sophie Bluel <span>Architecte d'intérieur</span></h1>
+      </a>
       <nav>
         <ul>
-          <li>projets</li>
-          <li>contact</li>
+          <li><a href="../index.html#portfolio">projets</a></li>
+          <li><a href="../index.html#contact">contact</a></li>
           <li><a href="./login.html">login</a></li>
-          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+          <li><img src="../assets/icons/instagram.png" alt="Instagram" /></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="login">
-        <form action="index.html" method="post">
-          <h1>Log in</h1>
+      <section class="login-section" id="login">
+        <form class="login-form" action="../index.html" method="post">
+          <h2 class="login-form__heading">Log in</h2>
           <label for="email">E-mail</label>
           <input id="email" type="email" />
-          <p class="error error--email"></p>
+          <p class="error-message email-error-message"></p>
           <label for="password">Mot de passe</label>
           <input id="password" type="password" />
-          <p class="error error--password"></p>
-          <input type="submit" value="Se connecter" />
-          <a href="#">Mot de passe oublié</a>
+          <p class="error-message password-error-message"></p>
+          <input class="btn btn--filled btn--animated" type="submit" value="Se connecter" />
+          <a class="login-form__forgoten-password" href="#">Mot de passe oublié</a>
         </form>
       </section>
     </main>
@@ -47,7 +49,6 @@
         </ul>
       </nav>
     </footer>
-
-    <script src="login.js"></script>
+    <script type="module" src="../js/login.js"></script>
   </body>
 </html>
