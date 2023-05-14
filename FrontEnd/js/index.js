@@ -1,6 +1,7 @@
 // IMPORTS AND EXPORTS
 import {apiGetWorks, apiGetCategories} from './fetch.js';
 const token = localStorage.getItem('token');
+console.log(token);
 // GALLERY
 // build gallery from a works array
 export const buildGallery = async (array) => {
