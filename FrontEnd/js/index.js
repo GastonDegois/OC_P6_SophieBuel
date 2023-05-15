@@ -74,8 +74,10 @@ showAllBtn.addEventListener('click', () => buildGallery(apiGetWorks()));
 
 // if the token is set in the localStorage, show the edit mode
 const editBanner = document.querySelector('.edit-mode__banner');
+const isUserLogged = localStorage.getItem('isUserLogged');
+console.log(isUserLogged);
 
-if (token != null) {
+if (token != null && isUserLogged === 'true') {
     editBanner.classList.remove('display-none');
     
     const login = document.querySelector('.login-link');
@@ -101,6 +103,7 @@ const logout = document.querySelector('.logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     window.localStorage.removeItem('token');
+    window.localStorage.setItem('isUserLogged', false);
     location.href="./index.html";
 })
 

@@ -1,4 +1,4 @@
-// // IMPORTS
+
 const token = localStorage.getItem('token');
 
 // // FETCH FUNCTIONS

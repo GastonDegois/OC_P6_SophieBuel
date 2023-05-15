@@ -53,6 +53,7 @@ const checkUser = async () => {
    } else if (r.status == 200) {
         const data = await r.json();
         window.localStorage.setItem('token', data.token);
+        window.localStorage.setItem('isUserLogged', true);
         location.href="../index.html";
     }
 }
